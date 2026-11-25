@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #EDEEF3;
+  color: #3F444A;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Шапка (Flex) */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 295px;
+  background: linear-gradient(90deg, #087990 0%, #055160 100%);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.header__title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.header__subtitle {
+  font-size: 21px;
+  font-weight: 400;
+  color: #CFF4FC;
+}
+
+/* Основной контейнер */
+.main {
+  max-width: 986px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* Поле поиска (Flex) */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -32px;
+  margin-bottom: 48px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 820px;
+  height: 64px;
+  padding: 0 32px;
+  font-family: inherit;
+  font-size: 24px;
+  color: #3F444A;
+  background-color: #FFFFFF;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #ABB5BE;
+}
+
+/* Сетка карточек (Grid) */
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+}
+
+/* Карточка (Flex) */
+.emoji-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  padding: 24px 20px;
+  min-height: 184px;
+  text-align: center;
+}
+
+.emoji-card__symbol {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.emoji-card__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 12px;
+}
+
+.emoji-card__keywords {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #3F444A;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 220px;
+  }
+
+  .header__title {
+    font-size: 42px;
+  }
+
+  .header__subtitle {
+    font-size: 16px;
+  }
+
+  .search-input {
+    height: 52px;
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .emoji-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .emoji-grid {
+    grid-template-columns: 1fr;
+  }
+}
